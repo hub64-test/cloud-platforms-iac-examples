@@ -119,7 +119,7 @@ module "eks" {
       capacity_type           = "ON_DEMAND"
       min_size                = 1
       max_size                = 3
-      instance_types          = ["m6a.4xlarge"]
+      instance_types          = ["m7a.xlarge"]
       enable_monitoring       = true
       subnet_ids              = module.vpc.private_subnets
       pre_bootstrap_user_data = <<EOF
@@ -154,8 +154,8 @@ module "eks" {
         }
       )
       capacity_type           = "ON_DEMAND"
-      desired_size            = 3
-      min_size                = 3
+      desired_size            = 1
+      min_size                = 1
       max_size                = 3
       instance_types          = ["i3.2xlarge"]
       enable_monitoring       = true
